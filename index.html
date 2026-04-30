@@ -154,6 +154,18 @@
             background: var(--card-bg);
             padding: 3rem;
             border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-form img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
         }
 
         input, textarea {
@@ -207,7 +219,7 @@
         <div class="logo">PRECISION.</div>
         <ul class="nav-links">
             <li><a href="#products">产品展示</a></li>
-            <li><a href="#douyin">抖音动态</a></li>
+            <li><a href="#douyin">视频展示</a></li>
             <li><a href="#contact">联系我们</a></li>
         </ul>
     </nav>
@@ -250,11 +262,11 @@
         <div class="card col-2" id="douyin" style="background: #000; color: white;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
-                    <span class="tag" style="background: #ff0050;">Douyin</span>
-                    <h3 style="margin-top: 1rem;">关注我们的抖音</h3>
-                    <p style="opacity: 0.7; font-size: 0.9rem;">获取最新产品动态与幕后花絮</p>
+                    <span class="tag" style="background: #ff0050;">视频展示</span>
+                    <h3 style="margin-top: 1rem;">源达视频1</h3>
+                    <p style="opacity: 0.7; font-size: 0.9rem;">观看产品演示与技术解析</p>
                 </div>
-                <a href="#" class="cta-btn" style="background: white; color: black; font-size: 0.8rem;">点击进入</a>
+                <a href="#" class="cta-btn" style="background: white; color: black; font-size: 0.8rem;">点击观看</a>
             </div>
         </div>
 
@@ -270,13 +282,9 @@
 
     <section class="contact-section" id="contact">
         <div class="contact-form">
-            <h2 style="margin-bottom: 2rem; font-weight: 800; letter-spacing: -1px;">开启您的定制方案</h2>
-            <form>
-                <input type="text" placeholder="您的姓名">
-                <input type="email" placeholder="您的邮箱">
-                <textarea rows="5" placeholder="请描述您的需求..."></textarea>
-                <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">发送私信</button>
-            </form>
+            <h2 style="margin-bottom: 2rem; font-weight: 800; letter-spacing: -1px;">扫码加我好友</h2>
+            <img src="./assets/contact_qrcode.jpg" alt="扫码加好友">
+            <p style="color: var(--text-sub);">微信扫码，立即获取专属定制方案</p>
         </div>
         <div class="info-card">
             <div class="info-item">
