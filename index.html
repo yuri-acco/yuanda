@@ -3,75 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品展示页</title>
+    <title>源达精密设备展示</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
         }
 
         body {
             background-color: #f8f9fa;
-            padding: 2rem;
+            padding: 2rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* 响应式卡片网格布局 */
+        /* 页面标题 */
+        .page-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #222;
+        }
+        .page-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式卡片网格 */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
+        /* 通用卡片样式 */
         .card {
-            background: white;
+            background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
         .card-media {
             width: 100%;
             height: 220px;
             object-fit: cover;
+            background-color: #f0f2f5;
         }
 
         .card-content {
             padding: 1rem;
+            text-align: center;
         }
-
         .card-title {
             font-size: 1rem;
             color: #333;
-            margin-top: 0.5rem;
-            text-align: center;
+            font-weight: 500;
         }
 
         /* 视频卡片样式 */
         .video-card .card-media {
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #ffffff;
         }
-
         .video-btn {
-            background: #ff4d4f;
+            background-color: #ff4d4f;
             color: white;
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 20px;
+            font-size: 0.85rem;
             cursor: pointer;
-            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .video-desc {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
         }
 
         /* 微信卡片样式 */
@@ -81,24 +98,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 2.5rem 1rem;
             text-align: center;
         }
-
-        .wechat-text {
-            font-size: 1.2rem;
+        .wechat-title {
+            font-size: 1.25rem;
             font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .wechat-name {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
-        /* 底部信息 */
-        .footer-info {
+        /* 页脚 */
+        .page-footer {
             text-align: center;
             margin-top: 3rem;
             color: #666;
             font-size: 0.9rem;
         }
 
-        /* 适配移动端 */
+        /* 移动端适配 */
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
@@ -106,67 +127,98 @@
             .card-grid {
                 grid-template-columns: 1fr;
             }
+            .page-header h1 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: #333; margin-bottom: 1rem;">精密设备产品展示</h1>
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <h1>源达精密设备产品展示</h1>
+        <p>Precision Engineered | 极致秩序与精密美学</p>
+    </header>
 
+    <!-- 卡片网格区域 -->
     <div class="card-grid">
-        <!-- 设备图片卡片 -->
+        <!-- 所有微信图片 -->
         <div class="card">
-            <img src="your-image1.jpg" alt="设备外观" class="card-media">
+            <img src="微信图片_20260429221039_30_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221040_31_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221041_32_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221042_33_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221043_34_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221043_35_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221044_36_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221045_37_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221046_38_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221047_39_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221047_40_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221048_41_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221049_42_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221050_43_31.jpg" alt="设备展示" class="card-media">
+        </div>
+        <div class="card">
+            <img src="微信图片_20260429221051_44_31.jpg" alt="设备展示" class="card-media">
         </div>
 
+        <!-- 源达图1.png -->
         <div class="card">
-            <img src="your-image2.jpg" alt="多层防护工艺" class="card-media">
-            <div class="card-content">
-                <p class="card-title">多层防护工艺</p>
-            </div>
+            <img src="源达图1.png" alt="源达产品图" class="card-media">
         </div>
 
-        <div class="card">
-            <img src="your-image3.jpg" alt="束管排布美学" class="card-media">
-            <div class="card-content">
-                <p class="card-title">束管排布美学</p>
-            </div>
-        </div>
-
-        <!-- 带视频的卡片（关键修改点：视频自动播放配置） -->
+        <!-- 视频卡片（自动播放配置） -->
         <div class="card video-card">
-            <!-- 视频自动播放核心配置：autoplay muted loop playsinline -->
-            <video class="card-media" autoplay muted loop playsinline poster="video-poster.jpg">
-                <source src="your-video.mp4" type="video/mp4">
-                您的浏览器不支持视频播放
+            <video class="card-media" autoplay muted loop playsinline poster="源达图1.png">
+                <source src="源达视频1.mp4" type="video/mp4">
+                您的浏览器不支持HTML5视频播放
             </video>
             <div class="card-content">
                 <button class="video-btn">视频展示</button>
-                <p style="text-align: center; margin-top: 0.5rem; font-size: 0.8rem; color: #666;">YBQ10便携式激光气体分析仪</p>
+                <p class="video-desc">YBQ10便携式激光气体分析仪<br>产品介绍视频</p>
             </div>
         </div>
 
+        <!-- 扫码加好友卡片 -->
         <div class="card">
-            <img src="your-image4.jpg" alt="精密过滤组件" class="card-media">
+            <img src="扫码加好友.jpg" alt="扫码加好友" class="card-media">
             <div class="card-content">
-                <p class="card-title">精密过滤组件</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="your-image5.jpg" alt="设备细节" class="card-media">
-        </div>
-
-        <!-- 微信卡片 -->
-        <div class="card wechat-card">
-            <div>
-                <p class="wechat-text">扫码加我好友</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">陈振华(激光束管监)</p>
+                <p class="card-title">扫码加我好友</p>
+                <p style="font-size:0.85rem; color:#666; margin-top:0.3rem;">陈振华(激光束管监)</p>
             </div>
         </div>
     </div>
 
-    <div class="footer-info">
+    <!-- 页脚 -->
+    <footer class="page-footer">
         <p>Precision Engineered | 极致秩序与精密美学</p>
-    </div>
+    </footer>
 </body>
 </html>
